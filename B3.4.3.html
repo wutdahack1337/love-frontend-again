@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+
+        <script>
+            const a = [10, 5, 80, 9].sort()
+            console.log(a)
+
+            const b = [10, 5, 80, 9].sort((a, b) => a - b);
+            console.log(b)
+
+            const c = [10, 5, 80, 9];
+            c.sort((a, b) => b - a);
+            console.log(c)
+
+            const d = [10, 5, 80, 9];
+            const e = [...d].sort((a, b) => a - b);
+            console.log(d, e)
+        </script>
+    </body>
+</html>

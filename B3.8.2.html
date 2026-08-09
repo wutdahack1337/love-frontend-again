@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <main class="playlist">
+        </main>
+
+        <script>
+            const danhSach = document.querySelector(".playlist");
+
+            danhSach.textContent = "Danh sach bai hat ne:"
+
+            const danhSachBaiHat = [
+                {ten: "Em cua ngay hom qua", caSi: "Son Tung MTP"},
+                {ten: "Anh nang cua anh", caSi: "Duc Phuc"},
+                {ten: "Not Like Us", caSi: "Kenrick Lmao"},
+            ];
+
+            const ul = document.createElement("ul");
+            danhSachBaiHat.forEach(bh => {
+                const li = document.createElement("li");
+                li.textContent = `${bh.ten} - ${bh.caSi}`;
+                ul.append(li);
+            })
+            danhSach.append(ul);
+        </script>
+    </body>
+</html>
