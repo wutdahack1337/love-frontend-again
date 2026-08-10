@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+
+        <main>
+            <form method="POST">
+                <label for="hoTen">Ho Ten</label>
+                <input type="text" id="hoTen" name="hoTen" required>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="thongBao"></div>
+        </main>
+
+
+        <script>
+            const form = document.querySelector("form") 
+            const hoTenInput = document.querySelector("#hoTen") 
+            const thongBao = document.querySelector(".thongBao")
+
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+
+                const hoTen = hoTenInput.value.trim()
+                
+                if (!hoTen) {
+                    thongBao.textContent = "Ho ten khong duoc de trong dau nha";
+                } else {
+                    thongBao.textContent = "ok roi do" ;
+                }
+            })
+        </script>
+
+    </body>
+</html> 

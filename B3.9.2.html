@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            .seat {
+                background-color: blue;
+            }
+
+            .selected {
+                background-color: gray;
+            }
+
+            .khuVucGhe {
+                display: flex;
+                gap: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="khuVucGhe">
+                <div class="seat">One</div>
+                <div class="seat">Two</div>
+                <div class="seat">Three</div>
+            </div>
+        </main>
+
+        <script>
+            const khuVucGhe = document.querySelector(".khuVucGhe")
+            khuVucGhe.addEventListener("click", e => {
+                if (e.target.classList.contains("seat")){
+                    e.target.classList.toggle("selected");
+                }
+            });
+        </script>
+
+    </body>
+
+
+</html>
